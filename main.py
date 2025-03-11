@@ -188,7 +188,7 @@ async def on_message(message):
 
         # Validate the Summoner#Tag format
         lol_name = message.content.strip()
-        if not re.match(r"^[a-zA-Z0-9]+#[0-9]{3,5}$", lol_name):
+        if not re.match(r"^[a-zA-Z0-9]+#[a-zA-Z0-9]{2,5}$", lol_name):
             await message.channel.send("Invalid League of Legends name format! Please use `Summoner#Tag` (e.g., `Summoner#1234`).")
             return
 
