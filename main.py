@@ -111,7 +111,7 @@ async def create_team(interaction: discord.Interaction, team_name: str, lol_name
     guild = interaction.guild
 
     # Validate LoL name format
-    if not re.match(r"^[a-zA-Z0-9]+#[0-9]{3,5}$", lol_name):
+    if not re.match(r"^[a-zA-Z0-9]+#[a-zA-Z0-9]{2,5}$", lol_name):
         await interaction.response.send_message("Invalid League of Legends name format! ❌\nUse: `Summoner#Tag` (e.g., `larrastiar#666`)", ephemeral=True)
         return
 
